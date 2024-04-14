@@ -1,0 +1,211 @@
+%-------------------------
+% Resume in Latex
+% Author : Dmitrii Novikov
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    \begin{minipage}[t]{0.99\linewidth} % Adjust the width as needed
+      {#1}
+    \end{minipage}
+    \vspace{1pt} % Adjust the space between elements as needed
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheadingLeftOneRow}[2]{% % added
+\begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+    \item[\small #1]{\textit{\small  #2}}
+\end{description}
+}
+
+\newcommand{\resumeSubSubheadingLeftTwoRows}[4]{%
+\begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+    \item[\small #1]{\textit{\small  #2}}
+    \item[\small #3]{\textit{\small  #4}}
+\end{description}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+    \textbf{\Huge \scshape Dmitrii Novikov} \\ \vspace{1pt}
+    \small \href{mailto:7nolikov@gmail.com}{\underline{7nolikov@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/7nolikov}{\underline{linkedin.com/in/7nolikov}} $|$
+    \href{https://github.com/7nolikov}{\underline{github.com/7nolikov}}
+\end{center}
+
+
+\section{Summary}
+    \resumeItemListStart
+        \resumeItem{Senior Software Engineer with over 5 years of experience in backend development, leveraging Java/Spring Boot within the retail, telecommunications, and e-commerce business domains and 3 years of QA Engineer background.}
+        \resumeItem{Experience in Google Cloud/Kubernetes environments and maintaining a cloud-native data platform.}
+        \resumeItem{Accelerated twice a sales process, significantly reducing costs and increasing income across the 20,000 branches by integrating QR code scanning technology.}
+        \resumeItem{Bachelor's degree in Computer Science.}
+    \resumeItemListEnd
+
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages}{: Java, SQL, NoSQL } \\
+    \textbf{Frameworks}{: Spring Framework, Spring Boot, Spring Data, Spring Test, JUnit, Mockito, Cucumber, JDBC, Hibernate} \\
+    \textbf{Databases}{: PostgreSQL, MongoDB, Redis, Minio} \\
+    \textbf{Architecture and Design}{: REST, GraphQL, Microservices} \\
+    \textbf{Distributed Systems}{: Apache Kafka, RabbitMQ, Keycloak}\\
+    \textbf{Developer Tools}{: Git, Maven, Gradle, Liquibase, Docker, IntelliJ, Postman} \\
+    \textbf{CI/CD and Cloud}{: GitLab CI/CD, Docker, Kubernetes, AWS, Google Cloud Platform}\\
+    }}
+\end{itemize}
+
+
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Software Engineer}{April 2019 -- Present}
+      {EPAM Systems}{Herceg Novi, Montenegro}
+    
+    \resumeSubSubheading
+      {Senior Software Engineer}{June 2022 -- Present}
+      
+    \resumeItemListStart
+        \resumeItem{Advanced the capabilities of an oil and gas industry cloud-native data platform by successfully integrating an on-premise solution with an existing Google Cloud-based system consisting of more than 20 interconnected microservices. This integration involved bare Kubernetes and introducing PostgreSQL and Minio drivers to enhance operational flexibility for the client's hybrid cloud and on-premise environments.}
+        \resumeItem{Enhanced software observability for improved troubleshooting and debugging by introducing an 'info' endpoint that dynamically collects 15 build and version details parameters of dependent services such as Java microservices, Redis, and Elastic, using Spring Boot's auto-configuration feature.}
+        \resumeItem{Significantly enhancing system portability and flexibility while minimizing vendor lock-in risks by implementing a cloud-agnostic storage layer. This achievement involved integrating a multi-cloud drivers library that enabled seamless compatibility with 6 storage types.}
+    \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Software Engineer}{April 2019 -- June 2022}
+      
+    \resumeItemListStart
+        \resumeItem{Accelerated twice the process for sales, significantly reducing operational costs and increasing income across the 20,000 branches company network by integrating QR code technology and reducing the amount of scanning.}
+        \resumeItem{Saved approximately 80 hours per week of manual data input work previously performed by staff members by introducing a pick-list generating service and hotkeys for popular categories at self-service checkout.}
+        \resumeItem{Significantly decreased the average service time per customer and reduced the cost of receipt tape across the entire retail network by implementing a paperless process for check returning using QR code scanning and the option to disable printing of canceled receipts.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer}{August 2018 -- April 2019}
+      {Grid Dynamics}{Saratov, Russian Federation}
+      
+    \resumeItemListStart
+        \resumeItem{Dramatically cut travel request processing time by 50\% through the development of a tracking solution utilizing Java, Spring Boot, and PostgreSQL.}
+        \resumeItem{Boosted the accuracy of travel expense reporting by 20\% by implementing a comprehensive suite of integration API and UI tests. This ensured seamless interoperability of the platform's services, which was achieved using tools like Spring Test, OpenFeign, and Selenium.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Kotlin Software Engineer}{December 2017 -- August 2018}
+      {DeliverAI}{Freelance}
+    \resumeItemListStart
+        \resumeItem{Designed and developed an MVP of the delivery marketplace platform from scratch to the first release for 6 months.}
+        \resumeItem{Led a small 4 developers team of freelancers, providing mentorship and guidance using pair programming and code review practices.}
+        \resumeItem{Worked closely with stakeholders to understand needs and ensure the MVP met expectations. Held regular demonstrations with stakeholders to get feedback and adjust the product as needed.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Saratov State University}{Saratov, Russian Federation}
+      {Bachelor's degree, Information Technology}{June 2017}
+\resumeSubHeadingListEnd
+  
+
+%-------------------------------------------
+\end{document}
