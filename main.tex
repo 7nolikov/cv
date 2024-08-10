@@ -40,11 +40,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
 
@@ -54,8 +54,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -76,7 +76,7 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeSubSubheadingLeftOneRow}[2]{% % added
@@ -96,7 +96,7 @@
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
@@ -115,6 +115,7 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -131,7 +132,7 @@
 
 \section{Summary}
     \resumeItemListStart
-        \resumeItem{Senior Software Engineer with over 5 years of experience in backend development, leveraging Java/Spring Boot within the retail, telecommunications, and e-commerce business domains and 3 years of QA Engineer background.}
+        \resumeItem{Senior Software Engineer with over 6 years of experience in backend development, leveraging Java/Spring Boot within the retail, telecommunications, and e-commerce business domains and 3 years of QA Engineer background.}
         \resumeItem{Experience in Google Cloud/Kubernetes environments and maintaining a cloud-native data platform.}
         \resumeItem{Accelerated twice a sales process, significantly reducing costs and increasing income across the 20,000 branches by integrating QR code scanning technology.}
         \resumeItem{Bachelor's degree in Computer Science.}
@@ -139,18 +140,14 @@
 
 
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \textbf{Languages}{: Java, SQL, NoSQL } \\
-    \textbf{Frameworks}{: Spring Framework, Spring Boot, Spring Data, Spring Test, JUnit, Mockito, Cucumber, JDBC, Hibernate} \\
-    \textbf{Databases}{: PostgreSQL, MongoDB, Redis, Minio} \\
-    \textbf{Architecture and Design}{: REST, GraphQL, Microservices} \\
-    \textbf{Distributed Systems}{: Apache Kafka, RabbitMQ, Keycloak}\\
-    \textbf{Developer Tools}{: Git, Maven, Gradle, Liquibase, Docker, IntelliJ, Postman} \\
-    \textbf{CI/CD and Cloud}{: GitLab CI/CD, Docker, Kubernetes, AWS, Google Cloud Platform}\\
-    }}
-\end{itemize}
-
+\small{
+\begin{tabularx}{\textwidth}{X X}
+    \textbf{Languages:} Java, SQL, NoSQL & \textbf{Methodologies:} Agile, Scrum, Kanban \\
+    \textbf{Databases:} PostgreSQL, MongoDB, Redis, Minio & \textbf{Architecture:} RESTful, Microservices, GraphQL-based \\
+    \textbf{Tools:} Git, Maven, Gradle, Docker, Liquibase, IntelliJ, Postman & \textbf{Distributed Systems:} Apache Kafka, RabbitMQ, Keycloak \\
+    \textbf{CI/CD \& Cloud:} AWS, Google Cloud, Kubernetes, Gitlab CI & \textbf{Frameworks:} Spring Framework, Spring Boot, Spring Data, Spring Test, JUnit, Mockito, Cucumber, JDBC, Hibernate 
+\end{tabularx}
+}
 
 \section{Experience}
 
@@ -161,7 +158,7 @@
       {EPAM Systems - S\&P 500 global leader in product development}{Herceg Novi, Montenegro}
     
     \resumeSubSubheading
-      {Senior Software Engineer}{June 2022 -- Present}
+      {Senior Software Engineer - Gas\&Oil cloud-native data management platform}{June 2022 -- Present}
       
     \resumeItemListStart
         \resumeItem{Advanced the capabilities of an oil and gas industry cloud-native data platform by successfully integrating an on-premise solution with an existing Google Cloud-based system consisting of more than 20 interconnected microservices. This integration involved bare Kubernetes and introducing PostgreSQL and Minio drivers to enhance operational flexibility for the client's hybrid cloud and on-premise environments.}
@@ -170,7 +167,7 @@
     \resumeItemListEnd
 
     \resumeSubSubheading
-      {Software Engineer}{April 2019 -- June 2022}
+      {Software Engineer - Retail stores \& POS backend platform}{April 2019 -- June 2022}
       
     \resumeItemListStart
         \resumeItem{Accelerated twice the process for sales, significantly reducing operational costs and increasing income across the 20,000 branches retail company network by integrating QR code technology and reducing the amount of scanning.}
@@ -179,7 +176,7 @@
     \resumeItemListEnd
 
     \resumeSubheading
-      {Software Engineer}{August 2018 -- April 2019}
+      {Software Engineer - Business trips \& relocation tracking system}{August 2018 -- April 2019}
       {Grid Dynamics - NASDAQ publicly traded enterprise digital transformation leader}{Saratov, Russian Federation}
       
     \resumeItemListStart
@@ -188,7 +185,7 @@
     \resumeItemListEnd
 
     \resumeSubheading
-      {Kotlin Software Engineer}{December 2017 -- August 2018}
+      {Kotlin Software Engineer - Food delivery management system}{December 2017 -- August 2018}
       {DeliverAI - Cloud-based online food ordering and delivery management platform}{Freelance}
     \resumeItemListStart
         \resumeItem{Designed and developed an MVP of the delivery marketplace platform from scratch to the first release for 6 months.}
