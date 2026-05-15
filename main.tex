@@ -132,22 +132,37 @@
 
 \section{Summary}
     \resumeItemListStart
-        \resumeItem{Senior Software Engineer with over 6 years of experience in backend development, leveraging Java/Spring Boot within the retail, telecommunications, and e-commerce business domains and 3 years of QA Engineer background.}
-        \resumeItem{Experience in Google Cloud/Kubernetes environments and maintaining a cloud-native data platform.}
-        \resumeItem{Accelerated twice a sales process, significantly reducing costs and increasing income across the 20,000 branches by integrating QR code scanning technology.}
-        \resumeItem{Bachelor's degree in Computer Science.}
+        \resumeItem{Senior backend engineer with 7+ years building distributed systems for cloud-native data platforms, moving from Java/Spring to Go and from generalist backend to distributed systems and observability infrastructure.}
+        \resumeItem{Currently working on OSDU at EPAM --- a 20+ microservices energy-domain data platform on Google Cloud and bare Kubernetes with PostgreSQL and MinIO.}
+        \resumeItem{Building PipeTrace on the side: a Go ingestion pipeline with end-to-end OpenTelemetry tracing, Prometheus SLO metrics, and auto-provisioned Grafana dashboards.}
+        \resumeItem{3 years of QA Engineer background informs testability and failure-mode design. Bachelor's degree in Computer Science.}
     \resumeItemListEnd
 
 
 \section{Technical Skills}
 \small{
 \begin{tabularx}{\textwidth}{X X}
-    \textbf{Languages:} Java, SQL, NoSQL & \textbf{Methodologies:} Agile, Scrum, Kanban \\
-    \textbf{Databases:} PostgreSQL, MongoDB, Redis, Minio & \textbf{Architecture:} RESTful, Microservices, GraphQL-based \\
-    \textbf{Tools:} Git, Maven, Gradle, Docker, Liquibase, IntelliJ, Postman & \textbf{Distributed Systems:} Apache Kafka, RabbitMQ, Keycloak \\
-    \textbf{CI/CD \& Cloud:} AWS, Google Cloud, Kubernetes, Gitlab CI & \textbf{Frameworks:} Spring Framework, Spring Boot, Spring Data, Spring Test, JUnit, Mockito, Cucumber, JDBC, Hibernate 
+    \textbf{Languages:} Go, Java, Kotlin, SQL & \textbf{Distributed Systems:} Apache Kafka, gRPC, RabbitMQ, microservices, event-driven \\
+    \textbf{Observability:} OpenTelemetry, Prometheus, Grafana, Jaeger, slog & \textbf{Storage:} PostgreSQL, MinIO / S3, MongoDB, Redis \\
+    \textbf{Infra \& Cloud:} Kubernetes (bare + GKE), Docker, Google Cloud, AWS, GitLab CI & \textbf{Frameworks:} Spring Framework, Spring Boot, Spring Data, JUnit, Mockito \\
+    \textbf{Tools:} Git, Maven, Gradle, Liquibase, IntelliJ, Postman & \textbf{Methodologies:} Agile, Scrum, Kanban
 \end{tabularx}
 }
+
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{PipeTrace} (osdu-ingestion-pipeline) $|$ \emph{Go, Kafka, OpenTelemetry, Prometheus, PostgreSQL, MinIO}}{\href{https://github.com/7nolikov/osdu-ingestion-pipeline}{\underline{github.com/7nolikov/osdu-ingestion-pipeline}}}
+      \resumeItemListStart
+        \resumeItem{Async ingestion pipeline (Kafka $\rightarrow$ validation $\rightarrow$ MinIO + PostgreSQL) with end-to-end OpenTelemetry tracing, Prometheus SLO metrics, and 4 auto-provisioned Grafana dashboards.}
+        \resumeItem{Two Go modules with \texttt{go.work}: a cloud-agnostic \texttt{storage/} library (MinIO/S3, GCS, local FS) and the \texttt{pipeline/} services.}
+        \resumeItem{Load-tested at $\sim$212 req/s with p99 $\sim$ 730 ms on 10K records. 45+ unit tests, testcontainers-go integration tests, 25+ golangci-lint rules in CI.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
 
 \section{Experience}
 
@@ -161,9 +176,9 @@
       {Senior Software Engineer - Gas\&Oil cloud-native data management platform}{June 2022 -- Present}
       
     \resumeItemListStart
-        \resumeItem{Advanced the capabilities of an oil and gas industry cloud-native data platform by successfully integrating an on-premise solution with an existing Google Cloud-based system consisting of more than 20 interconnected microservices. This integration involved bare Kubernetes and introducing PostgreSQL and Minio drivers to enhance operational flexibility for the client's hybrid cloud and on-premise environments.}
-        \resumeItem{Enhanced software observability for improved troubleshooting and debugging by introducing an 'info' endpoint that dynamically collects 15 build and version details parameters of dependent services such as Java microservices, Redis, and Elastic, using Spring Boot's auto-configuration feature.}
-        \resumeItem{Significantly enhancing system portability and flexibility while minimizing vendor lock-in risks by implementing a cloud-agnostic storage layer. This achievement involved integrating a multi-cloud drivers library that enabled seamless compatibility with 6 storage types.}
+        \resumeItem{Enhanced cross-service observability for an oil-and-gas cloud-native data platform by introducing an info endpoint that dynamically collects 15 build and version parameters from dependent services (Java microservices, Redis, Elastic) via Spring Boot auto-configuration.}
+        \resumeItem{Integrated an on-premise solution with an existing Google Cloud system of 20+ interconnected microservices on bare Kubernetes, introducing PostgreSQL and MinIO drivers to support hybrid-cloud and on-premise deployments.}
+        \resumeItem{Reduced vendor lock-in risk by implementing a cloud-agnostic storage layer with multi-cloud drivers compatible with 6 storage types.}
     \resumeItemListEnd
 
     \resumeSubSubheading
