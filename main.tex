@@ -54,8 +54,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-1pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -126,43 +126,31 @@
     \textbf{\Huge \scshape Dmitrii Novikov} \\ \vspace{1pt}
     \small \href{mailto:7nolikov@gmail.com}{\underline{7nolikov@gmail.com}} $|$ 
     \href{https://www.linkedin.com/in/7nolikov}{\underline{linkedin.com/in/7nolikov}} $|$
-    \href{https://github.com/7nolikov}{\underline{github.com/7nolikov}}
+    \href{https://github.com/7nolikov}{\underline{github.com/7nolikov}} $|$
+    \href{https://community.opengroup.org/Dmitrii_Novikov}{\underline{community.opengroup.org/Dmitrii\_Novikov}} \\ \vspace{2pt}
+    \small Zagreb, Croatia (CET) $|$ EU Blue Card holder
 \end{center}
 
 
 \section{Summary}
     \resumeItemListStart
-        \resumeItem{Senior backend engineer with 7+ years building distributed systems for cloud-native data platforms, moving from Java/Spring to Go and from generalist backend to distributed systems and observability infrastructure.}
-        \resumeItem{Currently working on OSDU at EPAM --- a 20+ microservices energy-domain data platform on Google Cloud and bare Kubernetes with PostgreSQL and MinIO.}
-        \resumeItem{Building PipeTrace on the side: a Go ingestion pipeline with end-to-end OpenTelemetry tracing, Prometheus SLO metrics, and auto-provisioned Grafana dashboards.}
-        \resumeItem{3 years of QA Engineer background informs testability and failure-mode design. Bachelor's degree in Computer Science.}
+        \resumeItem{Senior backend engineer, 8 years building and operating cloud-native data platforms in production: distributed services on bare Kubernetes, Kafka pipelines, hybrid-cloud storage, and the observability needed to run them. Java and Spring professionally, Go for new projects.}
+        \resumeItem{Contributor to the OSDU Data Platform since 2021, the open energy-industry data standard, on a 20+ microservices deployment running on Google Cloud and bare Kubernetes with PostgreSQL and MinIO.}
+        \resumeItem{Focus on observability and failure modes: distributed tracing, SLO metrics, and hybrid-cloud storage abstractions that keep multi-service systems legible in production.}
     \resumeItemListEnd
 
 
 \section{Technical Skills}
 \small{
-\begin{tabularx}{\textwidth}{X X}
-    \textbf{Languages:} Go, Java, Kotlin, SQL & \textbf{Distributed Systems:} Apache Kafka, gRPC, RabbitMQ, microservices, event-driven \\
-    \textbf{Observability:} OpenTelemetry, Prometheus, Grafana, Jaeger, slog & \textbf{Storage:} PostgreSQL, MinIO / S3, MongoDB, Redis \\
-    \textbf{Infra \& Cloud:} Kubernetes (bare + GKE), Docker, Google Cloud, AWS, GitLab CI & \textbf{Frameworks:} Spring Framework, Spring Boot, Spring Data, JUnit, Mockito \\
-    \textbf{Tools:} Git, Maven, Gradle, Liquibase, IntelliJ, Postman & \textbf{Methodologies:} Agile, Scrum, Kanban
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+    \textbf{Languages:} Go, Java, SQL, Bash & \textbf{Databases:} PostgreSQL, MongoDB, Redis, Elasticsearch \\
+    \textbf{Distributed Systems:} Kafka, RabbitMQ, gRPC, REST & \textbf{Cloud:} Google Cloud, AWS, Azure, MinIO / S3 \\
+    \textbf{Observability:} OpenTelemetry, Prometheus, Grafana, Jaeger & \textbf{Infrastructure:} Kubernetes, Docker, Helm, Linux \\
+    \textbf{Security:} OAuth2, RBAC, secrets management & \textbf{Architecture:} microservices, event-driven, API design \\
+    \textbf{Frameworks:} Spring Boot, Spring Data, JPA, JUnit & \textbf{Testing:} Mockito, SonarQube, integration and load testing \\
+    \textbf{CI/CD:} GitLab CI, GitHub Actions, Maven, Gradle & \textbf{AI:} Claude Code, LLM-assisted development
 \end{tabularx}
 }
-
-\section{Projects}
-
-\resumeSubHeadingListStart
-
-    \resumeProjectHeading
-      {\textbf{PipeTrace} (osdu-ingestion-pipeline) $|$ \emph{Go, Kafka, OpenTelemetry, Prometheus, PostgreSQL, MinIO}}{\href{https://github.com/7nolikov/osdu-ingestion-pipeline}{\underline{github.com/7nolikov/osdu-ingestion-pipeline}}}
-      \resumeItemListStart
-        \resumeItem{Async ingestion pipeline (Kafka $\rightarrow$ validation $\rightarrow$ MinIO + PostgreSQL) with end-to-end OpenTelemetry tracing, Prometheus SLO metrics, and 4 auto-provisioned Grafana dashboards.}
-        \resumeItem{Two Go modules with \texttt{go.work}: a cloud-agnostic \texttt{storage/} library (MinIO/S3, GCS, local FS) and the \texttt{pipeline/} services.}
-        \resumeItem{Load-tested at $\sim$212 req/s with p99 $\sim$ 730 ms on 10K records. 45+ unit tests, testcontainers-go integration tests, 25+ golangci-lint rules in CI.}
-      \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
 
 \section{Experience}
 
@@ -170,42 +158,36 @@
 
     \resumeSubheading
       {Senior Software Engineer}{April 2019 -- Present}
-      {EPAM Systems - S\&P 500 global leader in product development}{Herceg Novi, Montenegro}
+      {EPAM Systems -- S\&P 500 global leader in product development}{Zagreb, Croatia}
     
     \resumeSubSubheading
-      {Senior Software Engineer - Gas\&Oil cloud-native data management platform}{June 2022 -- Present}
+      {Senior Software Engineer -- OSDU open energy data platform}{June 2021 -- Present}
       
     \resumeItemListStart
-        \resumeItem{Enhanced cross-service observability for an oil-and-gas cloud-native data platform by introducing an info endpoint that dynamically collects 15 build and version parameters from dependent services (Java microservices, Redis, Elastic) via Spring Boot auto-configuration.}
-        \resumeItem{Integrated an on-premise solution with an existing Google Cloud system of 20+ interconnected microservices on bare Kubernetes, introducing PostgreSQL and MinIO drivers to support hybrid-cloud and on-premise deployments.}
-        \resumeItem{Reduced vendor lock-in risk by implementing a cloud-agnostic storage layer with multi-cloud drivers compatible with 6 storage types.}
+        \resumeItem{Named in The Open Group OSDU Forum's M13 release recognition in two contribution areas: Core Services and Energy Data Standards.}
+        \resumeItem{\textbf{135 merged upstream merge requests across 31 repositories} of the OSDU Data Platform (2021--2026), publicly attributable: core services (Storage, Search, Indexer, Schema, File, Dataset), security and compliance (Entitlements, Legal, Secret), provider libraries for \textbf{both Google Cloud and Azure}, and ingestion.}
+        \resumeItem{Technical lead on a cross-service Collaboration Context rollout: decomposed delivery into development, testing and operations tracks across six platform services and delegated to engineers from several member organisations.}
+        \resumeItem{Nine platform engagements for two hyperscale cloud providers and five energy-sector clients, covering both the provider side and operator deployments of the same standard.}
+        \resumeItem{Put a geospatial data service behind the platform's central entitlements service, so its data access enforces the same role-based permissions as the core services instead of its own.}
+        \resumeItem{Integrated an on-premise deployment with a 20+ microservice Google Cloud system on bare Kubernetes, adding PostgreSQL and MinIO drivers for hybrid cloud; cut vendor lock-in with a cloud-agnostic storage layer over 6 storage types.}
+        \resumeItem{Platform-wide rollouts and reliability work: a version/build info endpoint collecting 15 parameters from dependent Java microservices, Redis and Elasticsearch via Spring Boot auto-configuration; thread-context cleanup for memory leaks merged across multiple services.}
     \resumeItemListEnd
 
     \resumeSubSubheading
-      {Software Engineer - Retail stores \& POS backend platform}{April 2019 -- June 2022}
+      {Software Engineer -- Retail stores \& POS backend platform}{April 2019 -- June 2021}
       
     \resumeItemListStart
-        \resumeItem{Accelerated twice the process for sales, significantly reducing operational costs and increasing income across the 20,000 branches retail company network by integrating QR code technology and reducing the amount of scanning.}
-        \resumeItem{Saved approximately 80 hours per week of manual data input work previously performed by staff members by introducing a pick-list generating service and hotkeys for popular categories at self-service checkout.}
-        \resumeItem{Significantly decreased the average service time per customer and reduced the cost of receipt tape across the entire retail network by implementing a paperless process for check returning using QR code scanning and the option to disable printing of canceled receipts.}
+        \resumeItem{Halved checkout time across a 20,000-branch retail network by replacing multi-scan flows with QR codes, cutting operational cost and lifting revenue per store.}
+        \resumeItem{Removed 80 hours per week of manual data entry by generating pick-lists automatically and adding hotkeys for high-frequency categories at self-service checkout.}
     \resumeItemListEnd
 
     \resumeSubheading
-      {Software Engineer - Business trips \& relocation tracking system}{August 2018 -- April 2019}
-      {Grid Dynamics - NASDAQ publicly traded enterprise digital transformation leader}{Saratov, Russian Federation}
+      {Software Engineer -- Business trips \& relocation tracking system}{August 2018 -- April 2019}
+      {Grid Dynamics -- NASDAQ publicly traded enterprise digital transformation leader}{Saratov, Russian Federation}
       
     \resumeItemListStart
-        \resumeItem{Dramatically cut travel request processing time by 50\% through the development of a business trips tracking solution utilizing Java, Spring Boot, and PostgreSQL.}
-        \resumeItem{Boosted the accuracy of travel expense reporting by 20\% by implementing a comprehensive suite of integration API and UI tests. This ensured seamless interoperability of the platform's services, which was achieved using tools like Spring Test, OpenFeign, and Selenium.}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Kotlin Software Engineer - Food delivery management system}{December 2017 -- August 2018}
-      {DeliverAI - Cloud-based online food ordering and delivery management platform}{Freelance}
-    \resumeItemListStart
-        \resumeItem{Designed and developed an MVP of the delivery marketplace platform from scratch to the first release for 6 months.}
-        \resumeItem{Led a small 4 developers team of freelancers, providing mentorship and guidance using pair programming and code review practices.}
-        \resumeItem{Worked closely with stakeholders to understand needs and ensure the MVP met expectations. Held regular demonstrations with stakeholders to get feedback and adjust the product as needed.}
+        \resumeItem{Cut travel request processing time by 50\% with a trip-tracking service in Java, Spring Boot and PostgreSQL.}
+        \resumeItem{Raised expense-reporting accuracy by 20\% with an integration and UI test suite (Spring Test, OpenFeign, Selenium) that caught cross-service contract breaks before release.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
